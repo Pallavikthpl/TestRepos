@@ -1,19 +1,22 @@
 pipeline {
-    agent any 
+    agent none
     stages {
         stage('Build') { 
+            agent {label 'slave'}
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Pallavikthpl/TestRepos.git']]])
             }
         }
         stage('Test') { 
+                agent {label 'slave'}
             steps {
-                bat "echo Test"
+                sh "echo Test"
             }
         }
-        stage('Deploy') { 
+        stage('Deploy') {
+                agent {label 'slave'}
             steps {
-                bat "echo Deploy"
+                sh "echo Deploy"
             }
         }
     }
