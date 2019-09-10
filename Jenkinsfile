@@ -10,13 +10,13 @@ pipeline {
         stage('Test') { 
                
             steps {
-                sh "echo Test"
+                bat "echo Test"
             }
         }
         stage('Deploy') {
                 
             steps {
-                sh "echo Deploy"
+                bat "echo Deploy"
             }
         }
     }
