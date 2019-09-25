@@ -25,6 +25,8 @@ CREATE COMPUTE MODULE app1_Compute
 		END WHILE;
 	END;
 
+
+
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot = InputRoot;
 	END;
