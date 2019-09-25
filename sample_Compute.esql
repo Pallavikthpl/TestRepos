@@ -8,6 +8,8 @@ CREATE COMPUTE MODULE sample_Compute
 		DECLARE mybroker CHARACTER;
 		SET mybroker = BrokerName;
 		DECLARE myQueueManager CHARACTER;
+		
+		
 		SET myQueueManager = QueueManagerName;
 		
 		SET OutputRoot.XMLNSC = InputRoot.XMLNSC;
